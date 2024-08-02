@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}Course List{% endblock %}
+
+{% block content %}
+<h1>Course List</h1>
+<p>
+    Below is a table of all courses. Each course is listed with its course code, 
+    course name, occupied seats, total seats, and status. The status of a course 
+    is either "Full" or "Open". <br> A course is considered full if the number of occupied 
+    seats is greater than or equal to the total number of seats.
+</p>
+<p>
+    The idea is that the user can see which courses are full and which are open, and 
+    then decide which courses they would like to enroll in.
+</p>
+<table>
+    <thead>
+        <tr>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Occupied Seats</th>
+            <th>Total Seats</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for course in courses %}
+            <tr>
+                <td>{{ course.course_code }}</td>
+                <td>{{ course.course_name }}</td>
+                <td>{{ course.occupied_seats }}</td>
+                <td>{{ course.total_seats }}</td>
+                <td>
+                    {% if course.occupied_seats >= course.total_seats %}
+                        Full
+                    {% else %}
+                        Open
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

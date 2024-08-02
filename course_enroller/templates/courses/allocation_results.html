@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Registrations{% endblock %}
+
+{% block content %}
+<h1>Registrations</h1>
+<p>
+    Below is a table of all student registrations. 
+    Each student is listed with their registered courses. 
+    If a student has fewer than five registered courses, the remaining cells will be empty. <br>
+    This is an indication that the student was not lucky enough to be allocated all five of their preferred courses.
+</p>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Course 1</th>
+            <th>Course 2</th>
+            <th>Course 3</th>
+            <th>Course 4</th>
+            <th>Course 5</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for result in results %}
+            <tr>
+                <td>{{ result.student_id }}</td>
+                <td>{{ result.first_name }}</td>
+                <td>{{ result.last_name }}</td>
+                {% for course in result.registered_courses %}
+                    <td>{{ course }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

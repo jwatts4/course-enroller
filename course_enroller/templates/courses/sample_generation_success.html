@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Sample Generation Success{% endblock %}
+
+{% block content %}
+<h1>Sample Preference Generation Successful</h1>
+<p>Sample student preferences have been successfully generated.</p>
+<p>
+  <strong>Current number of preferences submitted: {{ preference_count }}</strong>
+</p>
+<a href="{% url 'home' %}">Return to Home</a>
+{% endblock %}

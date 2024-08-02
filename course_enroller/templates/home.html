@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Course Enroller</h1>
+<p>
+  This application allows students to submit their course preferences for the
+  upcoming semester. The system will then allocate courses based on availability
+  and student preferences.
+</p>
+<p>
+  <strong>Current number of preferences submitted: {{ preference_count }}</strong>
+</p>
+
+<h2>Student Use Cases</h2>
+<ol>
+  <li><strong>Submit Your Course Preferences</strong><br>
+      To submit your course preferences, click on the "Enter Preferences" link below. You will be taken to a form where you can enter your student information and rank your preferred courses.<br>
+      <a href="{% url 'enter_preferences' %}">Enter Preferences</a>
+  </li>
+  <li><strong>View Registrations</strong><br>
+      After the allocation has been performed, students can view their allocated courses by clicking on the "View Registrations" link.<br>
+      <a href="{% url 'allocation_results' %}">View Registrations</a>
+  </li>
+  <li><strong>View Course List</strong><br>
+    Admins and students can view the list of courses and their current availability status.<br>
+    <a href="{% url 'course_list' %}">View Course List</a>
+</li>
+</ol>
+
+<h2>Admin Use Cases</h2>
+<ol>
+  <li><strong>Perform Allocation</strong><br>
+      Once all students have submitted their preferences, an admin can run the allocation algorithm to assign students to courses based on their preferences and course availability.<br>
+      <a href="{% url 'perform_allocation' %}">Perform Allocation</a>
+  </li>
+  <li><strong>Generate Sample Preferences</strong><br>
+      Admins can generate sample preferences to test the allocation algorithm. This will create a set of sample student preferences and run the allocation.<br>
+      <a href="{% url 'sample_results' %}">Generate Sample Preferences</a>
+  </li>
+  <li><strong>Clear Database</strong><br>
+      Admins can clear the entire database to reset the application for a new semester or testing.<br>
+      <a href="{% url 'clear_data' %}">Clear Database</a>
+  </li>
+</ol>
+
+<h2>About</h2>
+<p>
+  Learn more about this application and its purpose: <br>
+  <a href="{% url 'about' %}">About</a>
+</p>
+
+{% endblock %}

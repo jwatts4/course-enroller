@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Enter Preferences{% endblock %}
+
+{% block content %}
+<h1>Enter Your Course Preferences</h1>
+<p>
+  Use this form to submit your course preferences for the upcoming semester. 
+  Please rank your courses in order of preference from 1 to 10. <br>
+  The system will use your rankings to allocate courses based on your ranking and availability.
+</p>
+<p>
+    <strong>Note:</strong> Duplicate courses are not allowed. 
+    Please ensure that you select each course only once.
+</p>
+<p>
+    Your top five highest-ranked choices will be considered for enrollment, and you
+    will automatically be enrolled in the courses based on availability.
+</p>
+<h2>Instructions</h2>
+<ol>
+  <li>Enter your student information (9 Digit Student ID, First Name, Last Name).</li>
+  <li>Select your preferred courses in the order of preference from the dropdown menus.</li>
+  <li>Avoid selecting the same course more than once, as duplicates are not allowed.</li>
+  <li>Click the "Submit" button to save your preferences.</li>
+</ol>
+<form method="post" onsubmit="return validateForm()">
+    {% csrf_token %} <!-- ward off cross-site forgery -->
+    {{ student_form.as_p }} <!-- Display the student form -->
+    {{ formset.management_form }} <!-- Display the course selects -->
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Course</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for form in formset %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ form.course }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    function validateForm() {
+        let courses = document.querySelectorAll('select');
+        let courseSet = new Set();
+    
+        for (let course of courses) {
+            if (courseSet.has(course.value)) {
+                alert('Duplicate courses are not allowed.');
+                return false;
+            }
+            courseSet.add(course.value);
+        }
+        return true;
+    }
+</script>
+{% endblock %}

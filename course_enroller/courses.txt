@@ -1,0 +1,75 @@
+CP315: Introduction to Scientific Computation
+CP414: Foundations of Computing
+CP469: iPhone Application Programming
+CP472: Programming Languages
+CP373: Ethics and Professional Practice in Computer Science
+CP322: Machine Learning
+CP220: Digital Electronics
+CP670: Android Application Programming
+CP493: Directed Research Project I
+CP320: Physical Computing: Digital Interaction with the Analog World
+CP316: Microprocessor Systems & Interfacing
+CP340: E-commerce
+CP610: Data Analysis
+CP321: Data Visualization
+CP310: Special Topics
+CP497: Interdisciplinary Design Project II
+CP621: Data Mining Mobile Devices
+CP319: Digital System Design
+CP421: Data Mining
+CP600: Practical Algorithm Design
+CP494: Directed Research Project II
+CP422: Programming for Big Data
+CP682: Special Topics
+CP202: Website Design
+CP212: Windows Application Programming
+CP216: Introduction to Microprocessors
+CP464: Selected Topics in Computer Hardware
+CP650: User Interface Design and Implementation
+CP312: Algorithm Design and Analysis I
+CP699: Master's Thesis
+CP460: Applied Cryptography
+CP476: Internet Computing
+CP614: Applied Cryptography
+CP471: Introduction to Compiling
+CP467: Image Processing & Pattern Recognition
+CP372: Computer Networks
+CP630: Enterprise Computing
+CP468: Artificial Intelligence
+CP363: Database I
+CP395: Directed Studies
+CP400R: Data Mining & Enterprise Computing
+CP465: Database II
+CP317: Software Engineering
+CP463: Simulation
+CP411: Computer Graphics
+CP685: Cyber Attack and Defense
+CP681: Directed Studies
+CP214: Discrete Structures for Computer Science
+CP213: Introduction to Object-Oriented Programming
+CP221: Analog Electronics I
+CP400: Special Topics
+CP495: Directed Studies
+CP351: Quantum Computing
+CP164: Data Structures I
+CP470: Android Programming
+CP386: Operating Systems
+CP103: Principles of Programming
+CP423: Text Retrieval and Search Engines
+CP631: Parallel Programming
+CP331: Parallel Programming
+CP669: iPhone Application Programming
+CP367: Introduction to System Programming
+CP400Q: Android Programming
+CP496: Interdisciplinary Design Project I
+CP461: Introduction to Computational Aspects of Bio-informatics
+CP364: Data Communications and Networks
+CP680: Capstone Project
+CP601: Seminar in Technology Entrepreneurship
+CP480: Wireless Communication & Networks
+CP640: Machine Learning
+CP412: Algorithm Design and Analysis II
+CP620: Data Mining Programming
+CP431: Parallel Programming
+CP264: Data Structures II
+CP104: Introduction to Programming

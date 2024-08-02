@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Perform Allocation{% endblock %}
+
+{% block content %}
+<h1>Perform Course Allocation</h1>
+<p>
+  The course allocation process assigns students to courses based on their submitted preferences. The algorithm considers the available seats in each course and tries to allocate students to their top choices.
+</p>
+<p>There are currently {{ preference_count }} preferences in the database.</p>
+<p>Click the button below to perform the course allocation based on student preferences.</p>
+<h2>Instructions</h2>
+<ol>
+  <li>Ensure that all students have submitted their course preferences.</li>
+  <li>Click the "Perform Allocation" button to run the allocation algorithm.</li>
+  <li>Once the allocation is complete, you can view the results on the "View Registrations" page.</li>
+</ol>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Perform Allocation</button>
+</form>
+{% endblock %}
