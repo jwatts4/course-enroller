@@ -1,11 +1,6 @@
 # Course Enroller
 
-Jake Watts - 151477490  
-Daniyal Khan - 210890640  
-Owen Macgowan - 169028180  
-Chidiebere Chukwuka - 169028180
-
-This is the repo for our CP317 group project. It is intended to be run locally.
+Final project for CP317. It is a Django application intended to be run locally.
 
 ---
 
